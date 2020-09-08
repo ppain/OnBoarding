@@ -1,6 +1,7 @@
 package com.paint.onboarding
 
 import android.content.DialogInterface
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -67,6 +68,9 @@ class OnBoardingFragment : DialogFragment(), PagerFragment.OnFragmentInteraction
         vp_on_boarding.apply {
             adapter = ViewPagerAdapter(this@OnBoardingFragment)
             registerOnPageChangeCallback(slidingCallback)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                setPageTransformer(DepthPageTransformer())
+            }
         }
 
         initIndicator()
