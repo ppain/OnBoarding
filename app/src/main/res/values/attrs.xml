@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PageIndicatorView">
+        <attr name="startMargin" format="dimension" />
+        <attr name="endMargin" format="dimension" />
+        <attr name="timer" format="integer" />
+        <attr name="interval" format="integer" />
+    </declare-styleable>
+</resources>

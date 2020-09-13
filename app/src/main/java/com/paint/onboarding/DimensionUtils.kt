@@ -23,6 +23,3 @@ val Number.px2dp: Float
 
 val Number.dp2px: Int
     get() = (this.toFloat() * displayMetrics.density).roundToInt()
-
-
-enum class OnBoardingState { PREVIOUS(), NEXT(), UPDATE_PB() }
